@@ -1,0 +1,51 @@
+<!-- 
+<p>Child Component</p>
+<div>
+    <table style="border: solid;">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Employee Age</th>
+                <th>Employee Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let item of EmployeeDetails">
+
+            </tr> 
+            <tr>
+                <td>{{EmployeeDetails.name}}</td>
+                <td>{{EmployeeDetails.age}}</td>
+                <td>{{EmployeeDetails.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<button (click)="sendData()">Submit</button> -->
+
+
+<p>Message from Employee Component: {{message}}</p>
+<p>Message1 from Employee Component: {{message1}}</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>DateOfBirth</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employees$ | async">
+            <td>{{item.name | uppercase}}</td>
+            <td>{{item.dateOfBirth | date}}</td>
+            <td>{{item.dateOfBirth | ageCalculation}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.salary | currency : 'USD'}}</td>
+        </tr>
+    </tbody>
+</table>

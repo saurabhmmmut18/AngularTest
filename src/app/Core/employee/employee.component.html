@@ -1,0 +1,50 @@
+<!-- <input type="text" disabled value="Parent Component Start">
+<!-- String interpolation 
+<div>
+    <input type="text" value="{{employeeName}}">
+</div>
+
+<!-- Property Binding 
+<div>
+    <input type="text" [value]="employeeName">
+</div>
+
+
+<!-- Two way data binding 
+<div>
+    <input type="text" [(ngModel)]="employeeName">
+</div>
+
+<!-- signal 
+<div>
+    {{empName()}}
+</div>
+
+<input type="text" disabled value="Parent Component End"> -->
+<!-- ParentToChild -->
+ <!-- <div>
+    <label>Employee Name:- </label>
+    <input type="text" [(ngModel)]="employeeModel.name">
+ </div>
+ <div>
+    <label>Employee Age: </label>
+    <input type="number" [(ngModel)]="employeeModel.age">
+ </div>
+ <div>
+    <label>Employee Address</label>
+    <input type="text" [(ngModel)]="employeeModel.address">
+ </div>
+ <div>
+    <input type="button" value="Submit" onclick="submit()">
+ </div>
+<app-employee-details [EmployeeDetails]="employeeModel" (parentData)="receiveData($event)"></app-employee-details> -->
+
+
+
+<p>Component to Component using Sibling communication</p>
+<input #name type="text">
+<button (click)="sendMessage(name.value)">Submit</button>
+
+
+<button (click)="interceptorMethod()">Submit</button>
+
