@@ -43,7 +43,7 @@
         <tr *ngFor="let item of employees$ | async">
             <td>{{item.name | uppercase}}</td>
             <td>{{item.dateOfBirth | date}}</td>
-            <td>{{item.dateOfBirth | ageCalculation}}</td>
+            <td>{{item.dateOfBirth | ageCalculation | number}}</td>
             <td>{{item.address}}</td>
             <td>{{item.salary | currency : 'USD'}}</td>
         </tr>
